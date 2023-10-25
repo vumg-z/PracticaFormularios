@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <title>CHINO 17100222</title>
+  </head>
+  <body class="bg-gray-300 flex items-center justify-center min-h-screen">
+
+    <form action="alumno.php" method="post" class="bg-white p-8 rounded shadow-lg">
+        <!-- Entrada de texto para el nombre -->
+        <div class="mb-4">
+            <label for="nombre" class="block text-sm font-medium text-gray-600">Nombre:</label>
+            <input type="text" id="nombre" name="nombre" required class="mt-1 p-2 w-full border rounded-md">
+        </div>
+
+        <!-- Entradas de radio para el género -->
+        <div class="mb-4">
+            <span class="block text-sm font-medium text-gray-600">Género:</span>
+            <div class="mt-2 space-x-4">
+                <label class="inline-flex items-center">
+                    <input type="radio" id="masculino" name="genero" value="masculino" required class="text-blue-600">
+                    <span class="ml-2">Masculino</span>
+                </label>
+                <label class="inline-flex items-center">
+                    <input type="radio" id="femenino" name="genero" value="femenino" required class="text-blue-600">
+                    <span class="ml-2">Femenino</span>
+                </label>
+            </div>
+        </div>
+
+        <!-- Entrada de fecha -->
+        <div class="mb-4">
+            <label for="fechaNacimiento" class="block text-sm font-medium text-gray-600">Fecha de Nacimiento:</label>
+            <input type="date" id="fechaNacimiento" name="fechaNacimiento" required class="mt-1 p-2 w-full border rounded-md">
+        </div>
+
+        <div>
+            <input type="submit" value="Enviar" class="w-full bg-blue-600 text-white p-2 rounded-md hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2">
+        </div>
+    </form>
+
+  </body>
+</html>
