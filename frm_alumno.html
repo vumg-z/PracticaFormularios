@@ -1,43 +1,90 @@
 <!DOCTYPE html>
-<html>
-  <head>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
     <title>CHINO 17100222</title>
-  </head>
-  <body class="bg-gray-300 flex items-center justify-center min-h-screen">
+</head>
+<body class="bg-gray-300 flex items-center justify-center min-h-screen">
 
-    <form action="alumno.php" method="post" class="bg-white p-8 rounded shadow-lg">
-        <!-- Entrada de texto para el nombre -->
-        <div class="mb-4">
-            <label for="nombre" class="block text-sm font-medium text-gray-600">Nombre:</label>
-            <input type="text" id="nombre" name="nombre" required class="mt-1 p-2 w-full border rounded-md">
-        </div>
+<div class="bg-white p-8 rounded shadow-lg">
+    <h1 class="text-2xl mb-4 text-center">Registro de Alumno</h1>
+    <form action="alumno.php" method="post" class="space-y-4">
 
-        <!-- Entradas de radio para el género -->
-        <div class="mb-4">
-            <span class="block text-sm font-medium text-gray-600">Género:</span>
-            <div class="mt-2 space-x-4">
-                <label class="inline-flex items-center">
-                    <input type="radio" id="masculino" name="genero" value="masculino" required class="text-blue-600">
-                    <span class="ml-2">Masculino</span>
-                </label>
-                <label class="inline-flex items-center">
-                    <input type="radio" id="femenino" name="genero" value="femenino" required class="text-blue-600">
-                    <span class="ml-2">Femenino</span>
-                </label>
+        <div class="flex -mx-2">
+            <!-- Columna 1 -->
+            <div class="w-1/2 px-2">
+                <!-- Entrada de texto para el Registro -->
+                <div class="mb-4">
+                    <label for="Registro" class="block text-sm font-medium text-gray-600">Registro:</label>
+                    <input type="number" id="Registro" name="Registro" required class="mt-1 p-2 w-full border rounded-md">
+                </div>
+
+                <!-- Entradas de texto para el Nombre y ApeP -->
+                <div class="mb-4">
+                    <label for="Nombre" class="block text-sm font-medium text-gray-600">Nombre:</label>
+                    <input type="text" id="Nombre" name="Nombre" required class="mt-1 p-2 w-full border rounded-md">
+                </div>
+                <div class="mb-4">
+                    <label for="ApeP" class="block text-sm font-medium text-gray-600">Apellido Paterno:</label>
+                    <input type="text" id="ApeP" name="ApeP" required class="mt-1 p-2 w-full border rounded-md">
+                </div>
+
+                <!-- Entrada de número para el Celular -->
+                <div class="mb-4">
+                    <label for="Celular" class="block text-sm font-medium text-gray-600">Celular:</label>
+                    <input type="number" id="Celular" name="Celular" required class="mt-1 p-2 w-full border rounded-md">
+                </div>
+
+                <!-- Entrada de texto para el Domicilio -->
+                <div class="mb-4">
+                    <label for="Domicilio" class="block text-sm font-medium text-gray-600">Domicilio:</label>
+                    <input type="text" id="Domicilio" name="Domicilio" required class="mt-1 p-2 w-full border rounded-md">
+                </div>
+            </div>
+
+            <!-- Columna 2 -->
+            <div class="w-1/2 px-2">
+                <!-- Entrada de texto para ApeM -->
+                <div class="mb-4">
+                    <label for="ApeM" class="block text-sm font-medium text-gray-600">Apellido Materno:</label>
+                    <input type="text" id="ApeM" name="ApeM" required class="mt-1 p-2 w-full border rounded-md">
+                </div>
+
+                <!-- Entradas de radio para el Sexo -->
+                <div class="mb-4">
+                    <span class="block text-sm font-medium text-gray-600">Sexo:</span>
+                    <div class="mt-2 space-x-4">
+                        <label class="inline-flex items-center">
+                            <input type="radio" id="masculino" name="Sexo" value="M" required class="text-blue-600">
+                            <span class="ml-2">Masculino</span>
+                        </label>
+                        <label class="inline-flex items-center">
+                            <input type="radio" id="femenino" name="Sexo" value="F" required class="text-blue-600">
+                            <span class="ml-2">Femenino</span>
+                        </label>
+                    </div>
+                </div>
+
+                <!-- Entrada de número para el Municipio y Carrera -->
+                <div class="mb-4">
+                    <label for="Municipio" class="block text-sm font-medium text-gray-600">Municipio (Código):</label>
+                    <input type="number" id="Municipio" name="Municipio" required class="mt-1 p-2 w-full border rounded-md">
+                </div>
+                <div class="mb-4">
+                    <label for="Carrera" class="block text-sm font-medium text-gray-600">Carrera (Código):</label>
+                    <input type="number" id="Carrera" name="Carrera" required class="mt-1 p-2 w-full border rounded-md">
+                </div>
             </div>
         </div>
 
-        <!-- Entrada de fecha -->
-        <div class="mb-4">
-            <label for="fechaNacimiento" class="block text-sm font-medium text-gray-600">Fecha de Nacimiento:</label>
-            <input type="date" id="fechaNacimiento" name="fechaNacimiento" required class="mt-1 p-2 w-full border rounded-md">
-        </div>
-
         <div>
-            <input type="submit" value="Enviar" class="w-full bg-blue-600 text-white p-2 rounded-md hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2">
+            <input type="submit" value="Registrar Alumno" class="w-full bg-blue-600 text-white p-2 rounded-md hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2">
         </div>
-    </form>
 
-  </body>
+    </form>
+</div>
+
+</body>
 </html>

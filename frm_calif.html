@@ -12,22 +12,40 @@
     <h1 class="text-2xl mb-4 text-center">Ingreso de Calificaciones</h1>
     <form action="calif.php" method="post" class="space-y-4">
 
-        <!-- Entrada de texto para el nombre del estudiante -->
-        <div>
-            <label for="nombreEstudiante" class="block text-sm font-medium text-gray-600">Nombre del Estudiante:</label>
-            <input type="text" id="nombreEstudiante" name="nombreEstudiante" required class="mt-1 p-2 w-full border rounded-md">
+        <!-- Entrada de número para PK_Calificacion -->
+        <div class="mb-4">
+            <label for="PK_Calificacion" class="block text-sm font-medium text-gray-600">ID Calificación:</label>
+            <input type="number" id="PK_Calificacion" name="PK_Calificacion" required class="mt-1 p-2 w-full border rounded-md">
         </div>
 
-        <!-- Entrada de número para la calificación -->
-        <div>
-            <label for="calificacion" class="block text-sm font-medium text-gray-600">Calificación (0-100):</label>
-            <input type="number" id="calificacion" name="calificacion" min="0" max="100" required class="mt-1 p-2 w-full border rounded-md">
+        <!-- Entrada de número para la Calificación -->
+        <div class="mb-4">
+            <label for="Calificacion" class="block text-sm font-medium text-gray-600">Calificación (0-100):</label>
+            <input type="number" id="Calificacion" name="Calificacion" min="0" max="100" required class="mt-1 p-2 w-full border rounded-md">
         </div>
 
-        <!-- Menú desplegable para seleccionar la materia -->
-        <div>
-            <label for="materia" class="block text-sm font-medium text-gray-600">Materia:</label>
-            <select id="materia" name="materia" required class="mt-1 p-2 w-full border rounded-md">
+        <!-- Entrada de texto para el Periodo -->
+        <div class="mb-4">
+            <label for="Periodo" class="block text-sm font-medium text-gray-600">Periodo:</label>
+            <input type="text" id="Periodo" name="Periodo" required class="mt-1 p-2 w-full border rounded-md">
+        </div>
+
+        <!-- Entrada de número para el Alumno -->
+        <div class="mb-4">
+            <label for="Alumno" class="block text-sm font-medium text-gray-600">ID Alumno:</label>
+            <input type="number" id="Alumno" name="Alumno" required class="mt-1 p-2 w-full border rounded-md">
+        </div>
+
+        <!-- Entrada de número para el Profesor -->
+        <div class="mb-4">
+            <label for="Profesor" class="block text-sm font-medium text-gray-600">ID Profesor:</label>
+            <input type="number" id="Profesor" name="Profesor" required class="mt-1 p-2 w-full border rounded-md">
+        </div>
+
+        <!-- Menú desplegable para seleccionar la Asignatura -->
+        <div class="mb-4">
+            <label for="Asignatura" class="block text-sm font-medium text-gray-600">Asignatura:</label>
+            <select id="Asignatura" name="Asignatura" required class="mt-1 p-2 w-full border rounded-md">
                 <option value="Matemáticas">Matemáticas</option>
                 <option value="Historia">Historia</option>
                 <option value="Biología">Biología</option>
